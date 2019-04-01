@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {environment} from '../environments/environment';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+ selector: 'app-root',
+ templateUrl: './app.component.html',
+ styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'EventOPS';
+export class AppComponent implements OnInit {
+ title = 'EventOPS';
+ env: any;
+
+ ngOnInit() {
+  this.env = environment
+ }
+
+
 }
